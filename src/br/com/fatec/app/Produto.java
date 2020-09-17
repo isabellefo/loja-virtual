@@ -1,21 +1,23 @@
-package br.com.fatec;
+package br.com.fatec.app;
 
 public class Produto {
 	private String nome;
 	private double valor;
-	public  Desconto desconto;
-	public  CalculadorPreco calculador;
+	public Desconto desconto;
+	public CalculadorPreco calculador;
 	
 	public Produto(String nome, double valor, Desconto desconto) {
 		this.nome = nome;
 		this.valor = valor;
-		
-		// se não foi especificado nenhum desconto, cria um desconto de 0%
-		if(desconto == null)
-			desconto = new Desconto(0);
 		this.desconto = desconto;
-
 		this.calculador = new CalculadorPreco(this);
+	}
+
+	public Produto (String nome, double valor) {
+		this.nome = nome;
+		this.valor = valor;
+		this.desconto = new Desconto(0);
+		this.calculador = new CalculadorPreco( this);
 	}
 	
 	public String getNome() {

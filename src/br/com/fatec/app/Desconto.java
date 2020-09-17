@@ -1,4 +1,4 @@
-package br.com.fatec;
+package br.com.fatec.app;
 
 public class Desconto {
 	private double porcentagem;
@@ -9,5 +9,9 @@ public class Desconto {
 	
 	public double getPorcentagem() {
 		return porcentagem;
+	}
+
+	public double getValorDesconto(double valorProduto) {
+		return porcentagem / 100 * valorProduto;
 	}
 }

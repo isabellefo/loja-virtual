@@ -1,18 +1,15 @@
-package br.com.fatec.main;
-
-import br.com.fatec.app.Desconto;
-import br.com.fatec.app.Produto;
+package br.com.fatec;
 
 public class Application {
 
 	public static void main(String[] args) {
-		var prod = new Produto("Notebook", 1000, new Desconto(100));
+		Produto p1 = new Produto("Computador", 1000.0);
+		Desconto d1 = new DescontoValor(10.0,p1);
+		CalculadorPreco calculador = new CalculadorPreco(d1,p1);		
 		
-		System.out.println(
-			"Nome do produto: " + prod.getNome() + "\n" +
-			"Valor original: R$ " + prod.getValorProduto() + "\n" +
-			"Valor com desconto: R$ " + prod.calculador.calcularDescontos()
-		);
+		System.out.println(calculador.calcularDescontos());
+		
+		
 	}
 
 }

@@ -1,17 +1,20 @@
-package br.com.fatec.app;
-
-import br.com.fatec.app.Produto;
+package br.com.fatec;
 
 public class CalculadorPreco {
-	private Produto produto;
+	public Produto produto;
+	public Desconto desconto;
 	
-	public CalculadorPreco(Produto produto) {
+	public CalculadorPreco(Desconto desconto, Produto produto){
+		this.desconto = desconto;
 		this.produto = produto;
 	}
 	
+	public double desconto() {
+		return desconto.getValorDesconto();
+	}
+	
 	public double calcularDescontos() {
-		double valorProduto = produto.getValorProduto();
-		return valorProduto - produto.desconto.getValorDesconto(valorProduto);
-//		return valorProduto - (valorProduto * produto.desconto.getPorcentagem() / 100);
+		System.out.println(desconto.getValorDesconto());
+		return (produto.getValorProduto() - desconto.getValorDesconto());
 	}
 }

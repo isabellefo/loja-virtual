@@ -1,17 +1,15 @@
-package br.com.fatec.app;
+package br.com.fatec;
 
-public class Desconto {
-	private double porcentagem;
-	
-	public Desconto(double porcentagem) {
-		this.porcentagem = porcentagem;
-	}
-	
-	public double getPorcentagem() {
-		return porcentagem;
-	}
+public abstract class Desconto {
 
-	public double getValorDesconto(double valorProduto) {
-		return porcentagem / 100 * valorProduto;
+	protected double valorDesconto;
+	protected Produto produto;
+
+	public Desconto(double valorDesconto/*, Produto produto*/) {
+		this.valorDesconto = valorDesconto;
+		//this.produto = produto;
 	}
+	
+	public abstract double getValorDesconto();
+
 }

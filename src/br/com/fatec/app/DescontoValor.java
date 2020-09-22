@@ -8,6 +8,7 @@ public class DescontoValor extends Desconto{
 	
 	@Override
 	public double getValorDesconto(double valorProduto) {
-		return valorDesconto < valorProduto ? valorDesconto : valorProduto;
+		double valorMaximo = this.valorMaximo(valorProduto);
+		return valorDesconto < valorMaximo ? valorDesconto : valorMaximo;
 	}
 }

@@ -12,4 +12,8 @@ public class FabricaDesconto {
 	public static Desconto  criarSemDesconto() {
 		return new DescontoValor(0);
 	}
+	
+	public static Desconto criarDescontoComposto(Desconto ...descontos) {
+		return new DescontoComposto(descontos);
+	}
 }

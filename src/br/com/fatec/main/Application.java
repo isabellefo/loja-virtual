@@ -10,14 +10,17 @@ public class Application {
 		Desconto valor = FabricaDesconto.criarDescontoValor(200);
 		Desconto porcentagem = FabricaDesconto.criarDescontoPorcentagem(10);
 		Desconto nenhum = FabricaDesconto.criarSemDesconto();
+		Desconto composto = FabricaDesconto.criarDescontoComposto(valor, porcentagem);
 		
 		CalculadorPreco calculador1 = new CalculadorPreco(valor,p1);
 		CalculadorPreco calculador2 = new CalculadorPreco(porcentagem,p1);	
-		CalculadorPreco calculador3 = new CalculadorPreco(nenhum,p1);	
+		CalculadorPreco calculador3 = new CalculadorPreco(nenhum,p1);
+		CalculadorPreco calculador4 = new CalculadorPreco(composto,p1);	
 		
 		printResultado(calculador1);
 		printResultado(calculador2);
 		printResultado(calculador3);
+		printResultado(calculador4);
 	
 	}
 	

@@ -12,6 +12,10 @@ public abstract class Desconto {
 		this.valorDesconto = valorDesconto;
 	}
 	
+	double valorMaximo(double valorProduto) {
+		return valorProduto;
+	}
+	
 	public abstract double getValorDesconto(double valorProduto);
 
 }

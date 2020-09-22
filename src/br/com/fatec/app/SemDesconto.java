@@ -2,14 +2,11 @@ package br.com.fatec;
 
 public class SemDesconto extends Desconto{
 	
-	//double valorDesconto = 0;
-	public SemDesconto(double valorDesconto/*, Produto produto*/) {
-		super(valorDesconto/*, produto*/);
-	}
+	double valorDesconto = 0.0;
 	
 	@Override
-	public double getValorDesconto() {
-		return 0.0;
+	public double getValorDesconto(double valorProduto) {
+		return valorDesconto;
 	}
 
 }

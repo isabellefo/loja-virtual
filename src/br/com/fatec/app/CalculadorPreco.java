@@ -9,12 +9,9 @@ public class CalculadorPreco {
 		this.produto = produto;
 	}
 	
-	public double desconto() {
-		return desconto.getValorDesconto();
-	}
-	
 	public double calcularDescontos() {
-		System.out.println(desconto.getValorDesconto());
-		return (produto.getValorProduto() - desconto.getValorDesconto());
+		double valorProduto = produto.getValorProduto();
+		double valorDesconto = desconto.getValorDesconto(valorProduto);
+		return (valorProduto - valorDesconto);
 	}
 }

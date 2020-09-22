@@ -1,4 +1,6 @@
-package br.com.fatec;
+package br.com.fatec.main;
+
+import br.com.fatec.app.*;
 
 public class Application {
 
@@ -24,19 +26,19 @@ public class Application {
 		System.out.println(
 				"Nome do produto: " + p1.getNome() + "\n" +
 				"Valor original: R$ " + p1.getValorProduto() + "\n" +
-				"Valor com desconto: R$ " + calculador1.calcularDescontos() + "\n"
+				"Valor com desconto: R$ " + calculador1.calcularPreco() + "\n"
 		);
 		
 		System.out.println(
 				"Nome do produto: " + p1.getNome() + "\n" +
 				"Valor original: R$ " + p1.getValorProduto() + "\n" +
-				"Valor com desconto: R$ " + calculador2.calcularDescontos() + "\n"
+				"Valor com desconto: R$ " + calculador2.calcularPreco() + "\n"
 		);
 		
 		System.out.println(
 				"Nome do produto: " + p1.getNome() + "\n" +
 				"Valor original: R$ " + p1.getValorProduto() + "\n" +
-				"Valor com desconto: R$ " + calculador3.calcularDescontos() + "\n"
+				"Valor com desconto: R$ " + calculador3.calcularPreco() + "\n"
 		);
 		
 		

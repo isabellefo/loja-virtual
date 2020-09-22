@@ -1,4 +1,4 @@
-package br.com.fatec;
+package br.com.fatec.app;
 
 public class CalculadorPreco {
 	public Produto produto;
@@ -9,7 +9,7 @@ public class CalculadorPreco {
 		this.produto = produto;
 	}
 	
-	public double calcularDescontos() {
+	public double calcularPreco() {
 		double valorProduto = produto.getValorProduto();
 		double valorDesconto = desconto.getValorDesconto(valorProduto);
 		return (valorProduto - valorDesconto);
